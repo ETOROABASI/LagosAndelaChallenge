@@ -22,6 +22,7 @@ import java.util.List;
 public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder> {
 
     private Context context;
+    //
     private List<UserData> userList;
 
     public UserAdapter(List<UserData> userList) {
