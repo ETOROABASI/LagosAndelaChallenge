@@ -6,6 +6,9 @@ import android.graphics.Paint;
 import android.graphics.Rect;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ImageView;
+
+import com.example.android.lagosandelachallenge.R;
 
 /**
  * Created by ETORO on 26/04/2017.
@@ -14,14 +17,20 @@ import android.view.View;
 public class UserAdapterDivider extends RecyclerView.ItemDecoration {
 
 
+
+
     @Override
     public void onDraw(Canvas c, RecyclerView parent, RecyclerView.State state) {
         Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
         paint.setStyle(Paint.Style.STROKE);
         paint.setColor(Color.GRAY);
 
-        int dividerLeft = parent.getPaddingLeft();
-        int dividerRight = parent.getWidth() - parent.getPaddingRight();
+
+
+
+
+        int dividerLeft = parent.getPaddingLeft()+ 96;              //gets the paddingLeft of the recyclerView in the xml
+        int dividerRight = parent.getWidth() - parent.getPaddingRight();  //gets the paddingRight of our RecyclerView
 
         int childCount = parent.getChildCount();
         for (int i = 0; i < childCount; i++) {

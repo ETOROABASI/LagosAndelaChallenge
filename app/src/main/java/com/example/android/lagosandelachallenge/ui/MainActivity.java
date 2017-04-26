@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setAdapterData(UserList userList) {
         UserAdapter adapter = new UserAdapter(userList.getItems());
-        mRecyclerView.addItemDecoration(new UserAdapterDivider());
+        //mRecyclerView.addItemDecoration(new UserAdapterDivider());    //this adds the line that divides each item in the RecycleView
         mRecyclerView.setAdapter(adapter);
         if(adapter.getItemCount()==0) {
 
